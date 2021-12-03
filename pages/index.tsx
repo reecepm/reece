@@ -83,7 +83,7 @@ const Home: React.FC = () => {
                 <TwitterIcon height={40} width={40} />
               </Social>
             </a>
-            {/* <a
+            <a
               href="https://instagram.com/reece_pm"
               target="_blank"
               rel="noreferrer"
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
               <Social>
                 <InstagramIcon height={40} width={40} />
               </Social>
-            </a> */}
+            </a>
           </Socials>
         </CenterColumn>
       </CenterColumn>
