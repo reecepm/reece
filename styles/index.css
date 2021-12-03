@@ -1,0 +1,25 @@
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+	height: 100vh
+}
+
+* {
+	color: black;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	box-sizing: border-box;
+	text-transform: lowercase;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #F4F4FA;
+}
+
+a {
+	text-transform: none;
+	text-decoration: none;
+}
