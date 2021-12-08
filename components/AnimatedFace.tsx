@@ -19,9 +19,15 @@ const AnimatedFace: React.FC<AnimatedFaceProps> = ({ image, onClick }) => {
       exit="exit"
       variants={variants}
       onClick={onClick}
-      style={{ cursor: "pointer", margin: -30}}
+      style={{ cursor: "pointer", margin: -30 }}
     >
-      <Image src={`/${image}`} height={210} width={210} quality={100} />
+      <Image
+        src={`/${image}`}
+        height={210}
+        width={210}
+        quality={100}
+        priority
+      />
     </motion.div>
   );
 };
