@@ -100,7 +100,9 @@ const Spotify = () => {
   const width = useWindowWidth();
   const iconWidth = width < 769 ? 34 : 50;
 
-  const { data: user } = useLanyard(DISCORD_ID);
+  const { data: user } = useLanyard(DISCORD_ID, {
+    refreshInterval: 30000,
+  });
 
   const listening = user && user.spotify;
 
