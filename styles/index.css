@@ -3,23 +3,24 @@ body,
 body > div:first-child,
 div#__next,
 div#__next > div {
-	height: 100vh
+  height: 100vh;
 }
 
 * {
-	color: black;
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	box-sizing: border-box;
-	text-transform: lowercase;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  box-sizing: border-box;
+  text-transform: lowercase;
 }
 
 body {
-	padding: 0;
-	margin: 0;
-	background: #F4F4FA;
+  padding: 0;
+  margin: 0;
+  background: #f4f4fa;
 }
 
 a {
-	text-transform: none;
-	text-decoration: none;
+  text-transform: none;
+  text-decoration: none;
 }
