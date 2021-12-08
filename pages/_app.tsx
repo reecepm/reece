@@ -25,11 +25,11 @@ const App = ({ Component, pageProps, router }: AppProps) => {
         }}
         canonical="https://reece.so"
       />
-      <AnimatePresence exitBeforeEnter>
-        <Layout>
+      <Layout>
+        <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.route} />
-        </Layout>
-      </AnimatePresence>
+        </AnimatePresence>
+      </Layout>
     </>
   );
 };
