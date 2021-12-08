@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Playing from "../components/icons/Playing";
 import SpotifySvg from "../components/icons/Spotify";
 import { useWindowWidth } from "@react-hook/window-size";
+import Image from "next/image";
 
 export const DISCORD_ID = "480435502445756429";
 
@@ -12,12 +13,14 @@ const SpotifyContainer = styled.div`
   height: 98px;
   background: white;
   border-radius: 20px;
-  padding: 24px 22px;
+  padding: 20px 22px;
   display: flex;
   gap: 16px;
   flex-direction: row;
   flex: 1;
   transition: all 0.15s linear;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     transform: scale(1.05);
@@ -28,14 +31,6 @@ const SpotifyContainer = styled.div`
     height: 68px;
     padding: 16px 15px;
     gap: 12px;
-  }
-
-  @media (max-width: 450px) {
-    width: 206px;
-    height: 54px;
-    padding: 13px 12px;
-
-    gap: 8px;
   }
 `;
 
@@ -68,7 +63,7 @@ const Song = styled(HideOverflow)`
 
 const Artist = styled(HideOverflow)`
   font-size: 0.75em;
-	@media (max-width: 450px) {
+  @media (max-width: 450px) {
     font-size: 0.5em;
   }
 `;
@@ -77,10 +72,6 @@ const Play = styled.div`
   font-size: 0.5em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.5);
-
-  @media (max-width: 450px) {
-    font-size: 0.375em;
-  }
 `;
 
 const PlayingColumn = styled.div`
@@ -107,6 +98,8 @@ const ConditionalWrapper = ({
 
 const Spotify = () => {
   const width = useWindowWidth();
+  const iconWidth = width < 769 ? 34 : 50;
+
   const { data: user } = useLanyard(DISCORD_ID);
 
   const listening = user && user.spotify;
@@ -125,11 +118,30 @@ const Spotify = () => {
       )}
     >
       <SpotifyContainer>
-        <SpotifySvg
-          height={width < 451 ? 27 : width < 769 ? 34 : 50}
-          width={width < 451 ? 27 : width < 769 ? 34 : 50}
-          fill={listening ? undefined : "#bbb"}
-        />
+        {listening ? (
+          <div
+            style={{
+              borderRadius: 12,
+              overflow: "hidden",
+              height: iconWidth,
+              width: iconWidth,
+            }}
+          >
+            <Image
+              src={user!.spotify!.album_art_url}
+              height={iconWidth}
+              width={iconWidth}
+              quality={100}
+              priority
+            />
+          </div>
+        ) : (
+          <SpotifySvg
+            height={iconWidth}
+            width={iconWidth}
+            fill={listening ? undefined : "#bbb"}
+          />
+        )}
         <SpotifyColumn>
           <Song>
             {listening ? user!.spotify!.song : "not listening to anything"}
