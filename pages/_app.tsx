@@ -10,8 +10,8 @@ const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.png" type="image/png"/>
-				<title>Reece</title>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <title>Reece</title>
       </Head>
       <DefaultSeo
         titleTemplate="%s - Reece Martin"
@@ -23,7 +23,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
           site_name: "Reece Martin | reece.so",
           images: [],
         }}
-        canonical={"https://reece.so"}
+        canonical="https://reece.so"
       />
       <AnimatePresence exitBeforeEnter>
         <Layout>
