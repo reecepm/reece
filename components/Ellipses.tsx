@@ -77,7 +77,7 @@ export const AnimatedEllipse = ({
         scale: [0.5, 1, 0.25, 1, 0.75, 1, 0.5],
       }}
       transition={{
-        duration: 30,
+        duration: 60,
         ease: "easeInOut",
         repeat: Infinity,
         delay,
