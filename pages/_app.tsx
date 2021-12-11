@@ -11,6 +11,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
     <>
       <Head>
         <link rel="icon" href="/favicon.png" type="image/png" />
+        <meta name="google-site-verification" content="9M0oVvJpC0UGJBS13QeriAIq-mJepznykHnWCHl42x0" />
         <title>Reece</title>
       </Head>
       <DefaultSeo
