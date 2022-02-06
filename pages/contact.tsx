@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
         <SubTitle>socials</SubTitle>
         <Social>
           <DiscordIcon height={34} width={34} />
-          <Handle>cascoid#0001</Handle>
+          <Handle>Cascoid#0001</Handle>
         </Social>
         <a href="https://twitter.com/cascoid" target="_blank" rel="noreferrer">
           <Social>
