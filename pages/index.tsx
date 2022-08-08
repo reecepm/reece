@@ -75,7 +75,7 @@ const Home: React.FC = () => {
               </Social>
             </a>
             <a
-              href="https://twitter.com/cascoid"
+              href="https://twitter.com/reece_pm"
               target="_blank"
               rel="noreferrer"
             >
