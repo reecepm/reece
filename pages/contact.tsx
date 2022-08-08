@@ -21,12 +21,12 @@ const Contact: React.FC = () => {
         <SubTitle>socials</SubTitle>
         <Social>
           <DiscordIcon height={34} width={34} />
-          <Handle style={{textTransform: "none"}}>Cascoid#0001</Handle>
+          <Handle style={{textTransform: "none"}}>Reece#9999</Handle>
         </Social>
         <a href="https://twitter.com/cascoid" target="_blank" rel="noreferrer">
           <Social>
             <TwitterIcon height={34} width={34} />
-            <Handle>@cascoid</Handle>
+            <Handle>@reece_pm</Handle>
           </Social>
         </a>
         <a href="mailto:admin@eternal.dev" target="_blank" rel="noreferrer">
